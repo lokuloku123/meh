@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krutais zaķis</title>
+    <style>
+    body{
+        background-image: url('https://cdn.britannica.com/79/191679-050-C7114D2B/Adult-capybara.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;        
+    }
+
+    .container {
+    background-color: rgba(255, 255, 255, 0.8); 
+    }
+
+    .hidden {
+        display: none;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Virsraksts liels</h1>
+        <h2>Virsraksts mazs :c</h2>
+        <p>šis ir paragrāfs</p>
+        <img src="https://bloximages.chicago2.vip.townnews.com/hjnews.com/content/tncms/assets/v3/editorial/e/81/e81014e4-bce8-5eae-8fff-a0e1b6c70af1/577eea02d60f7.image.jpg?crop=973%2C973%2C413%2C0&resize=1200%2C1200&order=crop%2Cresize" alt="forsais trusis" width="300">
+        <table>
+            <tr>
+                <th>Company</th>
+                <th>Contact</th>
+                <th>Country</th>
+            </tr>
+            <tr>
+                <td>Alfreds Futterkiste</td>
+                <td>Maria Anders</td>
+                <td>Germany</td>
+            </tr>
+            <tr>
+                <td>Centro comercial Moctezuma</td>
+                <td>Francisco Chang</td>
+                <td>Mexico</td>
+            </tr>
+        </table>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank">Foršais video</a>
+        <ol>
+            <li>Pirmais</li>
+            <li>Otrais</li>
+            <li>Trešais
+                <ul>
+                    <li>Tests 3.1</li>
+                    <li>Tests 3.2</li>
+                </ul>
+            </li>
+        </ol>
+        <button id="myButton">Click me pls</button>
+        <div class="hidden" id="contentToShow">
+            <iframe width="500" height="500" src="https://vimeo.com/676247342" frameborder="1" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script>
+        const button = document.getElementById('myButton');
+        const content = document.getElementById('contentToShow');
+
+        button.addEventListener('click', function() {
+            content.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
