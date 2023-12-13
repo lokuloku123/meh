@@ -5,27 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Krutais zaķis</title>
     <style>
-    body{
-        background-image: url('https://cdn.britannica.com/79/191679-050-C7114D2B/Adult-capybara.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100vh;        
-    }
+        body {
+            background-image: url('https://cdn.britannica.com/79/191679-050-C7114D2B/Adult-capybara.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;        
+        }
 
-    .container {
-    background-color: rgba(255, 255, 255, 0.8); 
-    }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8); 
+            padding: 20px;
+            margin: 20px;
+        }
 
-    .hidden {
-        display: none;
-    }
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Virsraksts liels</h1>
         <h2>Virsraksts mazs :c</h2>
-        <p>šis ir paragrāfs</p>
+        <p id="contentToChange">šis ir paragrāfs</p>
         <img src="https://bloximages.chicago2.vip.townnews.com/hjnews.com/content/tncms/assets/v3/editorial/e/81/e81014e4-bce8-5eae-8fff-a0e1b6c70af1/577eea02d60f7.image.jpg?crop=973%2C973%2C413%2C0&resize=1200%2C1200&order=crop%2Cresize" alt="forsais trusis" width="300">
         <table>
             <tr>
@@ -47,7 +49,7 @@
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank">Foršais video</a>
         <ol>
             <li>Pirmais</li>
-            <li>Otrais</li>
+            <li id="secondButton" class="hidden">Otrais</li>
             <li>Trešais
                 <ul>
                     <li>Tests 3.1</li>
@@ -55,19 +57,23 @@
                 </ul>
             </li>
         </ol>
-        <button id="myButton">Click me pls</button>
+        <button id="toggleContentButton">Make Content Disappear</button>
         <div class="hidden" id="contentToShow">
-        	<video autoplay controls height="220" width="390">
-			<source src="videoplayback (1).mp4" type="video/mp4">
-		</video>
+            <video autoplay controls height="220" width="390">
+                <source src="videoplayback (1).mp4" type="video/mp4">
+            </video>
         </div>
+    </div>
 
     <script>
-        const button = document.getElementById('myButton');
-        const content = document.getElementById('contentToShow');
+        const toggleContentButton = document.getElementById('toggleContentButton');
+        const contentToShow = document.getElementById('contentToShow');
+        const secondButton = document.getElementById('secondButton');
 
-        button.addEventListener('click', function() {
-            content.classList.toggle('hidden');
+        toggleContentButton.addEventListener('click', function() {
+            contentToShow.classList.toggle('hidden');
+            toggleContentButton.classList.add('hidden');
+            secondButton.classList.remove('hidden');
         });
     </script>
 </body>
